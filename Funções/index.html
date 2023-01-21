@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções no JavaScript</title>
+
+    <script>
+        // funções literais
+
+        function somar(n1, n2) {
+            return n1 + n2
+        }
+
+        var soma = somar(3, 2)
+        console.log("A soma é: ", soma)
+
+        // funcões podem ter propriedades
+        somar.desc = "somar é uma função que soma dois números."
+        console.log(somar.desc)
+
+        // funções anônimas
+
+        var teste = function () {
+            console.log("isso é uma função anônima")
+        }
+
+        // chamando a função.
+        teste()
+
+        // função em parâmentros
+        var teste2 = function abacaixi(f) {
+            f()
+        }
+
+        teste2(function () {
+            console.log("Esta é uma função passada através de um parâmentro!")
+        })
+
+        console.log("-----------------------------")
+
+        // Escopo das funções
+
+        var x = 0
+
+        function mostrarValor() {
+            var x = 10
+            console.log("Valor de X: ", x)
+        }
+        mostrarValor()
+
+        console.log("Valor de X: ", x)
+
+
+        // // funções IFEE
+
+        // (function () {
+        //     // Não permite que se crie variaves sem declaração.
+        //     "use strict"
+        //     // console.log("função IFEE")
+        // })()
+
+        function somarValores(arr) {
+            var result = 0
+            var cont = 0
+            while (arguments[cont]) {
+                result += arguments[cont]
+                cont++
+            }
+
+            console.log("resultado: ", result)
+        }
+
+        somarValores(20, 30, 10, 40)
+
+    </script>
+</head>
+
+<body>
+    <h1>Curso Web Desing Udemy</h1>
+</body>
+
+</html>
